@@ -9,11 +9,6 @@ This program uses:
 ## Usage
 Feel free to use the code as you please, all I ask is that there is credit given.
 
-## Author & Credits
-| Full Name       | Role                                        |
-|-----------------|---------------------------------------------|
-| Matthew Inwards | Lead designer and programmer                |
-
 ## Contact
 If there are any issues please raise them on the repo.
 
