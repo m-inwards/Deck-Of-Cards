@@ -74,3 +74,20 @@ if __name__ == "__main__":
     print(test_deck)
     for card in test_deck.card_array:
         print(card)
+
+    print("Remove Card |||||||||||||||||||||||||||||||||||||||")
+    test_card_to_remove = test_deck.card_array[0]
+    print(f"Card to remove is ({test_card_to_remove})")
+
+    test_deck.remove_card(test_card_to_remove)
+    print(test_deck)
+    for card in test_deck.card_array:
+        print(card)
+
+    print("Add Card ||||||||||||||||||||||||||||||||||||||||||")
+    print(f"Card to add is ({test_card_to_remove})")
+
+    test_deck.add_card(test_card_to_remove)
+    print(test_deck)
+    for card in test_deck.card_array:
+        print(card)
