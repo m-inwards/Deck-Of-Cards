@@ -20,4 +20,4 @@ If there are any issues please raise them on the repo.
 ***
 
 ## License
-Please see licence file.
+[See license file](LICENSE)
