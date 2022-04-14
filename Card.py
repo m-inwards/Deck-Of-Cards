@@ -5,10 +5,12 @@ class Card:
         self.suit = suit
         self.colour = colour
 
+    # Overrides standard print string
     def __str__(self) -> str:
         return f"{self.name} of {self.suit}"
 
 
+# Testing
 if __name__ == "__main__":
     test_card = Card("ACE", 1, "SPADES", "BLACK")
     print(test_card)

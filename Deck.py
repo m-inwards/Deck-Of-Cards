@@ -7,9 +7,11 @@ class Deck:
         self.name = name
         self.card_array = []
 
+    # Overrides standard print string
     def __str__(self) -> str:
         return f"This is a deck called \"{self.name}\" and contains {len(self.card_array)} card(s)"
 
+    # Converts the decks array of cards to be a standard 52 card deck
     def generate_standard_deck(self):
         self.card_array = []
 
@@ -40,12 +42,14 @@ class Deck:
             for name, value in values:
                 self.card_array.append(Card(name, value, suit, colour))
 
+    # Thoroughly shuffles the deck of cards
     def shuffle_deck(self):
         shuffle(self.card_array)
         shuffle(self.card_array)
         shuffle(self.card_array)
 
 
+# Testing
 if __name__ == "__main__":
     print("Deck Creation |||||||||||||||||||||||||||||||||||||")
     test_deck = Deck("My Test Deck")
