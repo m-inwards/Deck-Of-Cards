@@ -17,7 +17,36 @@ class Hand:
     def remove_card(self, card_to_remove):
         self.card_array.remove(card_to_remove)
 
+    # Sorts hand of cards
+    def sort_hand(self):
+        self.card_array.sort(key=lambda card: card.value)
+        self.card_array.sort(key=lambda card: card.suit)
+
 
 # Testing
 if __name__ == "__main__":
-    print("placeholder")
+    test_hand = Hand("Matt")
+
+    test_card_1 = Card("ACE", 1, "SPADES", "BLACK")
+    test_card_2 = Card("3", 3, "HEARTS", "BLACK")
+    test_card_3 = Card("KING", 13, "DIAMONDS", "BLACK")
+    test_card_4 = Card("2", 2, "HEARTS", "BLACK")
+    test_card_5 = Card("5", 5, "CLUBS", "BLACK")
+    test_card_6 = Card("4", 4, "SPADES", "BLACK")
+
+    test_hand.add_card(test_card_1)
+    test_hand.add_card(test_card_2)
+    test_hand.add_card(test_card_3)
+    test_hand.add_card(test_card_4)
+    test_hand.add_card(test_card_5)
+    test_hand.add_card(test_card_6)
+
+    print("Cards before sorting:")
+    for card in test_hand.card_array:
+        print(card)
+
+    test_hand.sort_hand()
+
+    print("Cards after sorting:")
+    for card in test_hand.card_array:
+        print(card)
