@@ -33,8 +33,8 @@ class Game:
         # Generates standard 52 card deck and shuffles it ready for use
         # »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»
         self.game_deck = Deck("Go Fish Game Deck")
-        self.game_deck = self.game_deck.generate_standard_deck()
-        self.game_deck = self.game_deck.shuffle_deck()
+        self.game_deck.generate_standard_deck()
+        self.game_deck.shuffle_deck()
 
         print(f"\033[0;36;1m[{datetime.now().strftime('%H:%M:%S')} INFO]: GAME INITIALIZED\033[0;0m")
 
