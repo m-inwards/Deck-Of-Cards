@@ -22,6 +22,10 @@ class Hand:
         self.card_array.sort(key=lambda card: card.value)
         self.card_array.sort(key=lambda card: card.suit)
 
+    def sort_go_fish_hand(self):
+        self.card_array.sort(key=lambda card: card.suit)
+        self.card_array.sort(key=lambda card: card.value)
+
 
 # Testing
 if __name__ == "__main__":
