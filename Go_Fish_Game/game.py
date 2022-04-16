@@ -1,4 +1,3 @@
-from Card import Card
 from Deck import Deck
 from Hand import Hand
 from datetime import datetime
