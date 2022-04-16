@@ -28,12 +28,30 @@ class Game:
             if add_another_player_response in ["no", "n"]:
                 another_player = False
 
+        self.number_of_players = len(self.players_array)
+        self.players_turn_index = 0
+
         # »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»
         # Generates standard 52 card deck and shuffles it ready for use
         # »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»
         self.game_deck = Deck("Go Fish Game Deck")
         self.game_deck.generate_standard_deck()
         self.game_deck.shuffle_deck()
+
+        # »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»
+        # Deals 7 cards into each player's hand
+        # »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»
+        for (player_name, player_hand) in self.players_array:
+            for loop in range(7):
+                pulled_card = self.game_deck.card_array[0]
+                self.game_deck.remove_card(pulled_card)
+                player_hand.add_card(pulled_card)
+
+        # »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»
+        # Sorts the cards in each player's hand
+        # »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»
+        for (player_name, player_hand) in self.players_array:
+            player_hand.sort_go_fish_hand()
 
         print(f"\033[0;36;1m[{datetime.now().strftime('%H:%M:%S')} INFO]: GAME INITIALIZED\033[0;0m")
 
