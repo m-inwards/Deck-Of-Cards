@@ -18,7 +18,7 @@ class Hand:
         self.card_array.remove(card_to_remove)
 
     # Sorts hand of cards
-    def sort_hand(self):
+    def sort_standard_hand(self):
         self.card_array.sort(key=lambda card: card.value)
         self.card_array.sort(key=lambda card: card.suit)
 
@@ -45,7 +45,7 @@ if __name__ == "__main__":
     for card in test_hand.card_array:
         print(card)
 
-    test_hand.sort_hand()
+    test_hand.sort_standard_hand()
 
     print("Cards after sorting:")
     for card in test_hand.card_array:
