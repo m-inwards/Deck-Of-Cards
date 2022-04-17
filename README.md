@@ -3,7 +3,7 @@
 # Deck Of Cards
 ## Installation
 This program uses:
-- The standard python libraries \[Python 3.10\] (Other versions will likely work, but this is what it has been developed in.)
+- The standard python libraries \[Python 3.10\]
 
 
 ## Usage
