@@ -2,12 +2,11 @@ from Card import Card
 
 
 class Hand:
-    def __init__(self, owner):
-        self.owner = owner
+    def __init__(self):
         self.card_array = []
 
     def __str__(self) -> str:
-        return f"This hand belongs to {self.owner} and contains {len(self.card_array)} card(s)"
+        return f"This hand contains {len(self.card_array)} card(s)"
 
     # Adds card to hand
     def add_card(self, card_to_add):
@@ -46,11 +45,11 @@ if __name__ == "__main__":
     test_hand.add_card(test_card_6)
 
     print("Cards before sorting:")
-    for card in test_hand.card_array:
-        print(card)
+    for current_card in test_hand.card_array:
+        print(current_card)
 
     test_hand.sort_standard_hand()
 
     print("Cards after sorting:")
-    for card in test_hand.card_array:
-        print(card)
+    for current_card in test_hand.card_array:
+        print(current_card)
