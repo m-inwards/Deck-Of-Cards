@@ -7,7 +7,19 @@ class Card:
 
     # Overrides standard print string
     def __str__(self) -> str:
-        return f"{self.name} of {self.suit}"
+        suit_ascii = ""
+
+        match self.suit:
+            case "SPADES":
+                suit_ascii = "♤"
+            case "HEARTS":
+                suit_ascii = "♡"
+            case "CLUBS":
+                suit_ascii = "♧"
+            case "DIAMONDS":
+                suit_ascii = "♢"
+
+        return f"{self.name}{suit_ascii} ({self.name} of {self.suit})"
 
 
 # Testing
