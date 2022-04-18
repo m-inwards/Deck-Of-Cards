@@ -7,3 +7,7 @@ def print_info(message):
 
 def print_warn(message):
     print(f"\033[0;33;1m[{datetime.now().strftime('%H:%M:%S')} WARN]: {message}\033[0;0m")
+
+
+def print_error(message):
+    print(f"\033[0;31;1m[{datetime.now().strftime('%H:%M:%S')} WARN]: {message}\033[0;0m")
