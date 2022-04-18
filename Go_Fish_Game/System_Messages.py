@@ -10,4 +10,4 @@ def print_warn(message):
 
 
 def print_error(message):
-    print(f"\033[0;31;1m[{datetime.now().strftime('%H:%M:%S')} WARN]: {message}\033[0;0m")
+    print(f"\033[0;31;1m[{datetime.now().strftime('%H:%M:%S')} ERROR]: {message}\033[0;0m")
